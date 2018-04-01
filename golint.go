@@ -18,7 +18,7 @@ func GoLint(args ...string) error {
 		cmdParameters = append(cmdParameters, args...)
 		cmdParameters = append(cmdParameters, pth)
 
-		cmd := exec.Command("golint")
+		cmd := exec.Command(cmdName)
 		cmd.Args = cmdParameters
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
