@@ -50,6 +50,10 @@ https://godoc.org/github.com/mcandre/mage-extras
 
 * [Mage](https://magefile.org/) (e.g., `go get github.com/magefile/mage`)
 
+## Recommended
+
+* [karp](https://github.com/mcandre/karp) (e.g. `go get https://github.com/mcandre/karp/...`) for conveniently browsing coverage reports.
+
 # BUILDTIME REQUIREMENTS
 
 * [Go](https://golang.org/) 1.9+
@@ -75,6 +79,7 @@ $ go test
 
 ```console
 $ mage coverageHTML
+$ karp cover.html
 ```
 
 # LINT
