@@ -4,13 +4,26 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/magefile/mage/mg"
 	"github.com/mcandre/mage-extras"
 )
 
 // Default references the default build task.
-var Default = Test
+var Default = CoverageHTML
+
+// CoverHTML denotes the HTML formatted coverage filename.
+var CoverHTML = "cover.html"
+
+// CoverProfile denotes the raw coverage data filename.
+var CoverProfile = "cover.out"
+
+// CoverageHTML generates HTML formatted coverage data.
+func CoverageHTML() error { mg.Deps(CoverageProfile); return mageextras.CoverageHTML(CoverHTML, CoverProfile) }
+
+// CoverageProfile generates raw coverage data.
+func CoverageProfile() error { return mageextras.CoverageProfile(CoverProfile) }
 
 // Test executes the unit test suite.
 func Test() error { return mageextras.UnitTest() }
@@ -54,3 +67,15 @@ func NoVendor() error {
 
 	return nil
 }
+
+// CleanCoverage deletes coverage data.
+func CleanCoverage() error {
+	if err := os.RemoveAll(CoverHTML); err != nil {
+		return err
+	}
+
+	return os.RemoveAll(CoverProfile)
+}
+
+// Clean deletes build artifacts.
+func Clean() error { mg.Deps(CleanCoverage); return nil }

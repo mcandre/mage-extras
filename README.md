@@ -28,6 +28,7 @@ $ mage noVendor
 mage-extras defines some reusable task predicates for common workflows, in a platform-agnostic way:
 
 * running unit tests
+* generating code coverage reports
 * linting with assorted Go linting tools
 * formatting Go code
 * installing and uninstall Go applications
@@ -70,6 +71,12 @@ $ go get github.com/mcandre/mage-extras
 $ go test
 ```
 
+# COVERAGE
+
+```console
+$ mage coverageHTML
+```
+
 # LINT
 
 ```console
@@ -79,5 +86,5 @@ $ mage lint
 # CLEAN ALL ARTIFACTS
 
 ```console
-$ mage -clean
+$ mage clean; mage -clean
 ```
