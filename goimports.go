@@ -13,7 +13,7 @@ func GoImports(args ...string) error {
 
 	cmdName := "goimports"
 
-	for pth := range CollectedGoSourceFiles {
+	for pth := range CollectedGoFiles {
 		cmdParameters := []string{cmdName}
 		cmdParameters = append(cmdParameters, args...)
 		cmdParameters = append(cmdParameters, pth)

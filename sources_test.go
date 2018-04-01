@@ -17,7 +17,7 @@ func TestSources(t *testing.T) {
 		t.Errorf("Expected %v to be non-empty", mageextras.CollectedGoFiles)
 	}
 
-	for pth, _ := range mageextras.CollectedGoFiles {
+	for pth := range mageextras.CollectedGoFiles {
 		_, err := os.Stat(pth)
 
 		if os.IsNotExist(err) {
@@ -29,7 +29,7 @@ func TestSources(t *testing.T) {
 		t.Errorf("Expected %v to be non-empty", mageextras.CollectedGoSourceFiles)
 	}
 
-	for pth, _ := range mageextras.CollectedGoTestFiles {
+	for pth := range mageextras.CollectedGoTestFiles {
 		_, err := os.Stat(pth)
 
 		if os.IsNotExist(err) {
@@ -41,7 +41,7 @@ func TestSources(t *testing.T) {
 		t.Errorf("Expected %v to be non-empty", mageextras.CollectedGoTestFiles)
 	}
 
-	for pth, _ := range mageextras.CollectedGoTestFiles {
+	for pth := range mageextras.CollectedGoTestFiles {
 		_, err := os.Stat(pth)
 
 		if os.IsNotExist(err) {
