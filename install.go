@@ -29,7 +29,7 @@ func Uninstall(applications ...string) error {
 	mg.Deps(LoadGoBinariesPath)
 
 	for _, application := range applications {
-		if err := os.Remove(path.Join(LoadedGoBinariesPath, application)); err != nil {
+		if err := os.RemoveAll(path.Join(LoadedGoBinariesPath, application)); err != nil {
 			return err
 		}
 	}
