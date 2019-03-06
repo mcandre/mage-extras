@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mcandre/mage-extras"
+	mageextras "github.com/mcandre/mage-extras"
 )
 
 func TestSources(t *testing.T) {

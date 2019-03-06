@@ -3,7 +3,7 @@ package mageextras_test
 import (
 	"testing"
 
-	"github.com/mcandre/mage-extras"
+	mageextras "github.com/mcandre/mage-extras"
 )
 
 func TestGoBinaryPath(t *testing.T) {

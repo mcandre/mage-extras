@@ -1,11 +1,26 @@
 package mageextras
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
 )
 
-// GoVet runs go tool vet against all Go packages in a project.
+// GoVetShadow runs go vet against all Go packages in a project,
+// with variable shadow checking enabled.
+//
+// Depends on golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow
+func GoVetShadow(args ...string) error {
+	shadowPath, err := exec.LookPath("shadow")
+
+	if err != nil {
+		return err
+	}
+
+	return GoVet(fmt.Sprintf("-vettool=%s", shadowPath))
+}
+
+// GoVet runs go vet against all Go packages in a project.
 func GoVet(args ...string) error {
 	cmdName := "go"
 
