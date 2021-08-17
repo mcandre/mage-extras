@@ -1,2 +1,6 @@
+# github.com/jhoonb/archivex v0.0.0-20201016144719-6a343cdae81d
+github.com/jhoonb/archivex
 # github.com/magefile/mage v1.11.0
 github.com/magefile/mage/mg
+# github.com/mcandre/zipc v0.0.4
+github.com/mcandre/zipc
