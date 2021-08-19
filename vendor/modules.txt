@@ -2,5 +2,7 @@
 github.com/jhoonb/archivex
 # github.com/magefile/mage v1.11.0
 github.com/magefile/mage/mg
+# github.com/mcandre/factorio v0.0.1
+github.com/mcandre/factorio
 # github.com/mcandre/zipc v0.0.4
 github.com/mcandre/zipc

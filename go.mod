@@ -4,5 +4,6 @@ go 1.13
 
 require (
 	github.com/magefile/mage v1.11.0
+	github.com/mcandre/factorio v0.0.1
 	github.com/mcandre/zipc v0.0.4
 )
