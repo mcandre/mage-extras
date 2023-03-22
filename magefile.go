@@ -19,6 +19,9 @@ var CoverHTML = "cover.html"
 // CoverProfile denotes the raw coverage data filename.
 var CoverProfile = "cover.out"
 
+// Audit runs a security audit.
+func Audit() error { return mageextras.SnykTest() }
+
 // CoverageHTML generates HTML formatted coverage data.
 func CoverageHTML() error { mg.Deps(CoverageProfile); return mageextras.CoverageHTML(CoverHTML, CoverProfile) }
 
