@@ -1,3 +1,4 @@
+//go:build mage
 // +build mage
 
 package main
@@ -5,6 +6,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/exec"
 
 	"github.com/magefile/mage/mg"
 	"github.com/mcandre/mage-extras"
@@ -23,7 +25,10 @@ var CoverProfile = "cover.out"
 func Audit() error { return mageextras.SnykTest() }
 
 // CoverageHTML generates HTML formatted coverage data.
-func CoverageHTML() error { mg.Deps(CoverageProfile); return mageextras.CoverageHTML(CoverHTML, CoverProfile) }
+func CoverageHTML() error {
+	mg.Deps(CoverageProfile)
+	return mageextras.CoverageHTML(CoverHTML, CoverProfile)
+}
 
 // CoverageProfile generates raw coverage data.
 func CoverageProfile() error { return mageextras.CoverageProfile(CoverProfile) }
@@ -52,8 +57,8 @@ func Nakedret() error { return mageextras.Nakedret("-l", "0") }
 // Staticcheck runs staticcheck.
 func Staticcheck() error { return mageextras.Staticcheck() }
 
-// Yamllint runs yamllint.
-func Yamllint() error { return mageextras.Yamllint("-s", ".yamllint", ".") }
+// Unmake runs unmake.
+func Unmake() error { return exec.Command("unmake", "makefile").Run() }
 
 // Lint runs the lint suite.
 func Lint() error {
@@ -64,7 +69,7 @@ func Lint() error {
 	mg.Deps(Errcheck)
 	mg.Deps(Nakedret)
 	mg.Deps(Staticcheck)
-	mg.Deps(Yamllint)
+	mg.Deps(Unmake)
 	return nil
 }
 
