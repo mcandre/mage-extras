@@ -6,10 +6,9 @@ package main
 import (
 	"fmt"
 	"os"
-	"os/exec"
 
 	"github.com/magefile/mage/mg"
-	"github.com/mcandre/mage-extras"
+	mageextras "github.com/mcandre/mage-extras"
 )
 
 // Default references the default build task.
@@ -58,7 +57,9 @@ func Nakedret() error { return mageextras.Nakedret("-l", "0") }
 func Staticcheck() error { return mageextras.Staticcheck() }
 
 // Unmake runs unmake.
-func Unmake() error { return exec.Command("unmake", "makefile").Run() }
+func Unmake() error {
+	return mageextras.Unmake(".")
+}
 
 // Lint runs the lint suite.
 func Lint() error {
