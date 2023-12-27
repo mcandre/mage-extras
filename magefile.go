@@ -38,9 +38,6 @@ func Test() error { return mageextras.UnitTest() }
 // GoVet runs go vet with shadow checks enabled.
 func GoVet() error { return mageextras.GoVetShadow() }
 
-// GoLint runs golint.
-func GoLint() error { return mageextras.GoLint() }
-
 // Gofmt runs gofmt.
 func GoFmt() error { return mageextras.GoFmt("-s", "-w") }
 
@@ -62,7 +59,6 @@ func Unmake() error { return mageextras.Unmake(".") }
 // Lint runs the lint suite.
 func Lint() error {
 	mg.Deps(GoVet)
-	mg.Deps(GoLint)
 	mg.Deps(GoFmt)
 	mg.Deps(GoImports)
 	mg.Deps(Errcheck)
