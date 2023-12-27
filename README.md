@@ -49,7 +49,7 @@ https://godoc.org/github.com/mcandre/mage-extras
 
 # LICENSE
 
-FreeBSD
+BSD-2-Clause
 
 # RUNTIME REQUIREMENTS
 
