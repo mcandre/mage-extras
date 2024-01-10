@@ -10,7 +10,7 @@
 
 * [ASDF](https://asdf-vm.com/) 0.10 (run `asdf reshim` after provisioning)
 * [direnv](https://direnv.net/) 2
-* an [open](https://github.com/mcandre/dotfiles) shim for non-BSD environments
+* macOS [open](https://ss64.com/mac/open.html) or equivalent alias
 
 # AUDIT
 
