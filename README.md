@@ -55,10 +55,6 @@ BSD-2-Clause
 
 * [Mage](https://magefile.org/) (e.g., `go install github.com/magefile/mage`)
 
-## Recommended
-
-* [karp](https://github.com/mcandre/karp) (e.g. `go install github.com/mcandre/karp/...`) for conveniently browsing coverage reports.
-
 # CONTRIBUTING
 
 For more details on developing mage-extras itself, see [DEVELOPMENT.md](DEVELOPMENT.md).
