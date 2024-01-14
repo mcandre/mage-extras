@@ -17,14 +17,12 @@ func Archive(portBasename string, artifactsPath string) error {
 	cmdParameters := []string{cmdName}
 	cmdParameters = append(cmdParameters, "czf")
 	cmdParameters = append(cmdParameters, archiveFilename)
-	cmdParameters = append(cmdParameters, "-C")
-	cmdParameters = append(cmdParameters, "bin")
 	cmdParameters = append(cmdParameters, artifactsPath)
 
 	cmd := exec.Command(cmdName)
 	cmd.Args = cmdParameters
+	cmd.Dir = "bin"
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-
 	return cmd.Run()
 }
