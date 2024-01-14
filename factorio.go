@@ -10,6 +10,7 @@ import (
 func Factorio(banner string, args ...string) error {
 	cmd := exec.Command("factorio")
 	cmd.Args = append(cmd.Args, args...)
+	cmd.Env = os.Environ()
 	cmd.Env = append(cmd.Env, fmt.Sprintf("FACTORIO_BANNER=%s", banner))
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
