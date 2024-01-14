@@ -1,16 +1,14 @@
 package mageextras
 
 import (
-	"os"
-
-	"github.com/mcandre/factorio"
+	"fmt"
+	"os/exec"
 )
 
 // Factorio cross-compiles Go binaries for a multitude of platforms.
 func Factorio(banner string, args ...string) error {
-	if err := os.Setenv("FACTORIO_BANNER", banner); err != nil {
-		return err
-	}
-
-	return factorio.Port(args)
+	cmd := exec.Command("factorio")
+	cmd.Args = append(cmd.Args, args...)
+	cmd.Env = append(cmd.Env, fmt.Sprintf("FACTORIO_BANNER=%s", banner))
+	return cmd.Run()
 }
