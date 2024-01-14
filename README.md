@@ -57,7 +57,7 @@ BSD-2-Clause
 
 ## Recommended
 
-* POSIX compatible [tar](https://pubs.opengroup.org/onlinepubs/7908799/xcu/tar.html)
+* GNU compatible [tar](https://www.gnu.org/software/tar/)
 * [tree](https://linux.die.net/man/1/tree)
 * a UNIX environment, such as macOS, Linux, BSD, [WSL](https://learn.microsoft.com/en-us/windows/wsl/), etc.
 
