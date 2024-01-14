@@ -7,8 +7,6 @@ import (
 )
 
 // Archive compresses build artifacts.
-//
-// Assumes a conventional bin build directory.
 func Archive(portBasename string, artifactsPath string) error {
 	archiveFilename := fmt.Sprintf("%s.tgz", portBasename)
 
@@ -17,11 +15,11 @@ func Archive(portBasename string, artifactsPath string) error {
 	cmdParameters := []string{cmdName}
 	cmdParameters = append(cmdParameters, "czf")
 	cmdParameters = append(cmdParameters, archiveFilename)
-	cmdParameters = append(cmdParameters, artifactsPath)
+	cmdParameters = append(cmdParameters, portBasename)
 
 	cmd := exec.Command(cmdName)
 	cmd.Args = cmdParameters
-	cmd.Dir = "bin"
+	cmd.Dir = artifactsPath
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
