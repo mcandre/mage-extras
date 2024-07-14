@@ -45,7 +45,7 @@ Mage is highly agnostic about workflows. mage-extras is a little more opinionate
 
 # DOCUMENTATION
 
-https://godoc.org/github.com/mcandre/mage-extras
+https://pkg.go.dev/github.com/mcandre/mage-extras
 
 # LICENSE
 
