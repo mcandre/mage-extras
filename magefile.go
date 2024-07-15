@@ -19,7 +19,7 @@ var CoverHTML = "cover.html"
 var CoverProfile = "cover.out"
 
 // Govulncheck runs govulncheck.
-func Govulncheck() error { return mageextras.Govulncheck("./...") }
+func Govulncheck() error { return mageextras.Govulncheck("-scan", "package", "./...") }
 
 // Snyk runs Snyk SCA.
 func Snyk() error { return mageextras.SnykTest() }
