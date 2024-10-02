@@ -1,9 +1,9 @@
 # BUILDTIME REQUIREMENTS
 
-* [Go](https://go.dev/) 1.23.0+
+* [Go](https://go.dev/) 1.23.2+
 * POSIX compatible [make](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html)
-* [Node.js](https://nodejs.org/en) 20.10.0+
 * [Rust](https://www.rust-lang.org/) 1.75.0+
+* [Snyk](https://snyk.io/)
 * Provision additional dev tools with `make`
 
 ## Recommended
