@@ -24,7 +24,7 @@ Apply a user environment variable `GODEBUG=modcacheunzipinplace=1` per [access d
 $ mage audit
 ```
 
-# UNIT TEST
+# TEST
 
 ```console
 $ mage test
