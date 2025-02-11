@@ -1,8 +1,10 @@
 # BUILDTIME REQUIREMENTS
 
-* [Go](https://go.dev/) 1.23.3+
+* [Go](https://go.dev/) 1.24.0+
+* [GNU](https://www.gnu.org/software/make/) / [BSD](https://man.freebsd.org/cgi/man.cgi?make(1)) make
+* [Rust](https://www.rust-lang.org/) 1.75.0+
 * [Snyk](https://snyk.io/)
-* Provision additional dev tools with `go install tool`
+* Provision additional dev tools with `make [-j 4]`
 
 ## Recommended
 
