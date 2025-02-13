@@ -1,7 +1,7 @@
 # BUILDTIME REQUIREMENTS
 
 * [Go](https://go.dev/) 1.24.0+
-* [GNU](https://www.gnu.org/software/make/) / [BSD](https://man.freebsd.org/cgi/man.cgi?make(1)) make
+* POSIX compatible [make](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html)
 * [Rust](https://www.rust-lang.org/) 1.75.0+
 * [Snyk](https://snyk.io/)
 * Provision additional dev tools with `make [-j 4]`
@@ -10,6 +10,7 @@
 
 * [ASDF](https://asdf-vm.com/) 0.10 (run `asdf reshim` after provisioning)
 * [direnv](https://direnv.net/) 2
+* [GNU](https://www.gnu.org/)/[BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution) make
 * macOS [open](https://ss64.com/mac/open.html) or equivalent alias
 
 Non-UNIX environments may produce subtle adverse effects when linting or generating application ports.
