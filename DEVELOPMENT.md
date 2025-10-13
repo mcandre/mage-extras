@@ -1,7 +1,7 @@
 # BUILDTIME REQUIREMENTS
 
 * a UNIX-like environment (e.g. [WSL](https://learn.microsoft.com/en-us/windows/wsl/))
-* [Go](https://go.dev/) 1.24.6+
+* [Go](https://go.dev/) 1.25.3+
 * [Snyk](https://snyk.io/)
 * Provision additional dev tools with `./install`
 
