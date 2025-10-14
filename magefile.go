@@ -23,7 +23,7 @@ var CoverProfile = "cover.out"
 func Govulncheck() error { return mageextras.Govulncheck("-scan", "package", "./...") }
 
 // Snyk runs Snyk SCA.
-func Snyk() error { return mageextras.SnykTest() }
+func Snyk() error { return mageextras.SnykTest("--dev") }
 
 // Audit runs a security audit.
 func Audit() error {
