@@ -6,6 +6,8 @@ import (
 )
 
 // SnykTest executes a snyk security audit.
+//
+// Recommend appending "--dev" for most software projects.
 func SnykTest(args ...string) error {
 	cmd := exec.Command("snyk")
 	cmd.Args = append(cmd.Args, "test")
