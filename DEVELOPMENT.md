@@ -1,13 +1,13 @@
 # BUILDTIME REQUIREMENTS
 
 * a UNIX-like environment (e.g. [WSL](https://learn.microsoft.com/en-us/windows/wsl/))
-* [Go](https://go.dev/) 1.25.3+
+* [Go](https://go.dev/)
 * [Snyk](https://snyk.io/)
 * Provision additional dev tools with `./install`
 
 ## Recommended
 
-* [ASDF](https://asdf-vm.com/) 0.10 (run `asdf reshim` after provisioning)
+* [ASDF](https://asdf-vm.com/) 0.18 (run `asdf reshim` after provisioning)
 * [direnv](https://direnv.net/) 2
 * macOS [open](https://ss64.com/mac/open.html) or equivalent alias
 
