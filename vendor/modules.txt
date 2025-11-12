@@ -18,6 +18,9 @@ github.com/magefile/mage/mage
 github.com/magefile/mage/mg
 github.com/magefile/mage/parse
 github.com/magefile/mage/sh
+# github.com/walle/targz v0.0.0-20140417120357-57fe4206da5a
+## explicit
+github.com/walle/targz
 # golang.org/x/exp/typeparams v0.0.0-20250408133849-7e4ce0ab07d0
 ## explicit; go 1.23.0
 golang.org/x/exp/typeparams

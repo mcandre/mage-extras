@@ -2,7 +2,10 @@ module github.com/mcandre/mage-extras
 
 go 1.25.3
 
-require github.com/magefile/mage v1.15.0
+require (
+	github.com/magefile/mage v1.15.0
+	github.com/walle/targz v0.0.0-20140417120357-57fe4206da5a
+)
 
 require (
 	github.com/BurntSushi/toml v1.5.0 // indirect
