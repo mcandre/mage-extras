@@ -2,7 +2,6 @@
 
 * [Go](https://go.dev/)
 * POSIX compliant [make](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html)
-* [Snyk](https://snyk.io/)
 * Provision additional dev tools with `make`
 
 ## Recommended
