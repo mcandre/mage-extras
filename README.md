@@ -48,7 +48,7 @@ mage-extras defines some reusable task predicates for common workflows, in a pla
 
 Mage is highly agnostic about workflows. mage-extras is a little more opinionated, introducing some useful conventions on top, such as reliably obtaining a list of non-vendored Go files paths, while allowing developers to customize builds to suit their project needs.
 
-# DOCUMENTATION
+# API DOCUMENTATION
 
 https://pkg.go.dev/github.com/mcandre/mage-extras
 
