@@ -1,31 +1,10 @@
 # mage-extras: some predefined tasks for common mage workflows
 
-[![Donate](https://img.shields.io/badge/GUMROAD-36a9ae?style=flat&logo=gumroad&logoColor=white)](https://mcandre.gumroad.com/)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/mcandre/mage-extras) [![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md) [![Donate](https://img.shields.io/badge/GUMROAD-36a9ae?style=flat&logo=gumroad&logoColor=white)](https://mcandre.gumroad.com/)
 
 # SUMMARY
 
 mage-extras provides a collection of prebaked tasks for common Go project software development needs.
-
-# EXAMPLE
-
-```console
-$ mage noVendor
-/Users/andrew/go/src/github.com/mcandre/mage-extras/test.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/mageextras_test.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/errcheck.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/sources.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/gox.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/nakedret.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/vet.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/goimports.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/mageextras.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/packages.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/pathseparator.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/binaries_test.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/sources_test.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/binaries.go
-/Users/andrew/go/src/github.com/mcandre/mage-extras/install.go
-```
 
 # ABOUT
 
@@ -48,13 +27,41 @@ mage-extras defines some reusable task predicates for common workflows, in a pla
 
 Mage is highly agnostic about workflows. mage-extras is a little more opinionated, introducing some useful conventions on top, such as reliably obtaining a list of non-vendored Go files paths, while allowing developers to customize builds to suit their project needs.
 
-# API DOCUMENTATION
+# EXAMPLES
 
-https://pkg.go.dev/github.com/mcandre/mage-extras
-
-# LICENSE
-
-BSD-2-Clause
+```console
+% mage noVendor
+/Users/andrew/go/src/github.com/mcandre/mage-extras/sources_test.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/archive.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/golint.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/xgo.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/version.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/factorio.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/sources.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/staticcheck.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/unmake.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/mageextras_test.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/chandler.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/compile.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/pathseparator.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/revive.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/goimports.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/install.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/test.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/binaries_test.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/dockerscout.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/yamllint.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/binaries.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/deadcode.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/errcheck.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/mageextras.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/nakedret.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/tuggy.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/coverage.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/govulncheck.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/vet.go
+/Users/andrew/go/src/github.com/mcandre/mage-extras/packages.go
+```
 
 # RUNTIME REQUIREMENTS
 
