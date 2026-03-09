@@ -1,8 +1,8 @@
 module github.com/mcandre/mage-extras
 
-go 1.25.4
+go 1.26.1
 
-require github.com/magefile/mage v1.15.0
+require github.com/magefile/mage v1.16.0
 
 require (
 	github.com/BurntSushi/toml v1.5.0 // indirect
