@@ -9,7 +9,12 @@ import (
 	"github.com/magefile/mage/sh"
 )
 
+// CleanGoReleaser removes artifacts from the standard goreleaser directory "dist".
+func CleanGoReleaser() error { return sh.Rm("dist") }
+
 // GoReleaser executes goreleaser.
+//
+// Silences output unless an error occurs.
 func GoReleaser(env map[string]string, args ...string) error {
 	var stdout bytes.Buffer
 	var stderr bytes.Buffer
