@@ -29,6 +29,7 @@ Examples:
   * `GoVetShadow`
   * `Nakedret`
 * `UnitTest` - trigger unit test suite
+* `GoReleaser`, `CleanGoReleaser` - Normalize [goreleaser](https://goreleaser.com/)
 
 # SYSTEM REQUIREMENTS
 
@@ -44,7 +45,6 @@ Prior art and personal plugs.
 * [invoke](https://pypi.org/project/invoke/) - 100% Python task runner
 * [mage](https://magefile.org/) - 100% Go task runner
 * [mcandre/tinyrick](https://github.com/mcandre/tinyrick) - 100% Rust task runner
-* [mcandre/tuco](https://github.com/mcandre/tuco) - Go port multiplexer
 * [Shake](https://shakebuild.com/) - 100% Haskell task runner
 
 🐱
