@@ -1,16 +1,23 @@
-# mage-extras: some predefined tasks for common mage workflows
+# mx: predefined tasks for common mage workflows
 
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/mcandre/mage-extras) [![Test](https://github.com/mcandre/mage-extras/actions/workflows/test.yml/badge.svg)](https://github.com/mcandre/mage-extras/actions/workflows/test.yml) [![license](https://img.shields.io/badge/license-BSD-0)](LICENSE.md)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/mcandre/mx) [![Test](https://github.com/mcandre/mx/actions/workflows/test.yml/badge.svg)](https://github.com/mcandre/mx/actions/workflows/test.yml) [![license](https://img.shields.io/badge/license-BSD-0)](LICENSE.md)
+
+```txt
+  _ __ ___ __  __
+ | '_ ` _ \\ \/ /
+ | | | | | |>  <
+ |_| |_| |_/_/\_\
+```
 
 # SUMMARY
 
-mage-extras streamlines common Go development tasks.
+mx streamlines common Go development tasks.
 
 # ABOUT
 
-[API Docs](https://pkg.go.dev/github.com/mcandre/mage-extras)
+[API Docs](https://pkg.go.dev/github.com/mcandre/mx)
 
-mage-extras provides utility functions for common Go development operations.
+mx provides utility functions for common Go development operations.
 
 Examples:
 
@@ -28,4 +35,6 @@ Examples:
 * [Go](https://go.dev/)
 * [Mage](https://magefile.org/) 1.16.1+
 
-For details on developing mage-extras, see our [development guide](DEVELOPMENT.md).
+For details on developing mx, see our [development guide](DEVELOPMENT.md).
+
+🐱

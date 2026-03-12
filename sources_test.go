@@ -1,23 +1,23 @@
-package mageextras_test
+package mx_test
 
 import (
 	"os"
 	"reflect"
 	"testing"
 
-	mageextras "github.com/mcandre/mage-extras"
+	mx "github.com/mcandre/mx"
 )
 
 func TestSources(t *testing.T) {
-	if err := mageextras.CollectGoFiles(); err != nil {
+	if err := mx.CollectGoFiles(); err != nil {
 		t.Error(err)
 	}
 
-	if len(mageextras.CollectedGoFiles) < 1 {
-		t.Errorf("Expected %v to be non-empty", mageextras.CollectedGoFiles)
+	if len(mx.CollectedGoFiles) < 1 {
+		t.Errorf("Expected %v to be non-empty", mx.CollectedGoFiles)
 	}
 
-	for pth := range mageextras.CollectedGoFiles {
+	for pth := range mx.CollectedGoFiles {
 		_, err := os.Stat(pth)
 
 		if os.IsNotExist(err) {
@@ -25,11 +25,11 @@ func TestSources(t *testing.T) {
 		}
 	}
 
-	if len(mageextras.CollectedGoSourceFiles) < 1 {
-		t.Errorf("Expected %v to be non-empty", mageextras.CollectedGoSourceFiles)
+	if len(mx.CollectedGoSourceFiles) < 1 {
+		t.Errorf("Expected %v to be non-empty", mx.CollectedGoSourceFiles)
 	}
 
-	for pth := range mageextras.CollectedGoTestFiles {
+	for pth := range mx.CollectedGoTestFiles {
 		_, err := os.Stat(pth)
 
 		if os.IsNotExist(err) {
@@ -37,11 +37,11 @@ func TestSources(t *testing.T) {
 		}
 	}
 
-	if len(mageextras.CollectedGoSourceFiles) < 1 {
-		t.Errorf("Expected %v to be non-empty", mageextras.CollectedGoTestFiles)
+	if len(mx.CollectedGoSourceFiles) < 1 {
+		t.Errorf("Expected %v to be non-empty", mx.CollectedGoTestFiles)
 	}
 
-	for pth := range mageextras.CollectedGoTestFiles {
+	for pth := range mx.CollectedGoTestFiles {
 		_, err := os.Stat(pth)
 
 		if os.IsNotExist(err) {
@@ -51,15 +51,15 @@ func TestSources(t *testing.T) {
 
 	var sourceWithTestFiles = make(map[string]bool)
 
-	for k, v := range mageextras.CollectedGoSourceFiles {
+	for k, v := range mx.CollectedGoSourceFiles {
 		sourceWithTestFiles[k] = v
 	}
 
-	for k, v := range mageextras.CollectedGoTestFiles {
+	for k, v := range mx.CollectedGoTestFiles {
 		sourceWithTestFiles[k] = v
 	}
 
-	if !reflect.DeepEqual(mageextras.CollectedGoFiles, sourceWithTestFiles) {
-		t.Errorf("Expected collected go files to include both source and test files, got: %v", mageextras.CollectedGoFiles)
+	if !reflect.DeepEqual(mx.CollectedGoFiles, sourceWithTestFiles) {
+		t.Errorf("Expected collected go files to include both source and test files, got: %v", mx.CollectedGoFiles)
 	}
 }

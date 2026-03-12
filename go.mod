@@ -1,4 +1,4 @@
-module github.com/mcandre/mage-extras
+module github.com/mcandre/mx
 
 go 1.26.1
 
