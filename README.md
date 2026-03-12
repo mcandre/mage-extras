@@ -26,6 +26,6 @@ Examples:
 # SYSTEM REQUIREMENTS
 
 * [Go](https://go.dev/)
-* [Mage](https://magefile.org/) (e.g., `go get -tool github.com/magefile/mage`)
+* [Mage](https://magefile.org/) 1.16.1+
 
 For details on developing mage-extras, see our [development guide](DEVELOPMENT.md).
