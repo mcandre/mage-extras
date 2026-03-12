@@ -18,7 +18,6 @@ mage-extras provides utility functions for common Go development operations.
   * `GoVet`
   * `GoVetShadow`
   * `Nakedret`
-  * `Revive`
 * `UnitTest` - trigger unit test suite
 * `Xgo` crosscompile cGo applications
 * `Run` for everything else
