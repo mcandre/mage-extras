@@ -12,9 +12,7 @@ import (
 // CleanGoReleaser removes artifacts from the standard goreleaser directory "dist".
 func CleanGoReleaser() error { return sh.Rm("dist") }
 
-// GoReleaser executes goreleaser.
-//
-// Silences output unless an error occurs.
+// GoReleaser executes goreleaser with the UNIX / Go idiom of silencing extraneous output.
 func GoReleaser(env map[string]string, args ...string) error {
 	var stdout bytes.Buffer
 	var stderr bytes.Buffer
