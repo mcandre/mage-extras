@@ -3,7 +3,7 @@ package mx_test
 import (
 	"testing"
 
-	mx "github.com/mcandre/mx"
+	"github.com/mcandre/mx"
 )
 
 func TestVersion(t *testing.T) {
