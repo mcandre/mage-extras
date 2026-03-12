@@ -12,6 +12,9 @@ mage-extras streamlines common Go development tasks.
 
 mage-extras provides utility functions for common Go development operations.
 
+Examples:
+
+* `GoEnv` - Query the `go env` toolchain configuration subsystem
 * `Install` - Compile and install Go executables
 * Lint Go projects recursively:
   * `GoImports`
@@ -19,7 +22,6 @@ mage-extras provides utility functions for common Go development operations.
   * `GoVetShadow`
   * `Nakedret`
 * `UnitTest` - trigger unit test suite
-* `Run` for everything else
 
 # SYSTEM REQUIREMENTS
 

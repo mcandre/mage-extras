@@ -3,6 +3,8 @@ package mageextras
 import (
 	"fmt"
 	"os/exec"
+
+	"github.com/magefile/mage/sh"
 )
 
 // GoVetShadow runs go vet against all Go packages in a project,
@@ -25,5 +27,5 @@ func GoVet(args ...string) error {
 	as = append(as, "vet")
 	as = append(as, args...)
 	as = append(as, "./...")
-	return Run("go", as...)
+	return sh.RunV("go", as...)
 }
