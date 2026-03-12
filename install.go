@@ -12,7 +12,7 @@ func Install(args ...string) error {
 	var as []string
 	as = append(as, "install")
 	as = append(as, args...)
-	as = append(as, AllPackagesPath)
+	as = append(as, "./...")
 	return Run("go", as...)
 }
 

@@ -24,6 +24,6 @@ func GoVet(args ...string) error {
 	var as []string
 	as = append(as, "vet")
 	as = append(as, args...)
-	as = append(as, AllPackagesPath)
+	as = append(as, "./...")
 	return Run("go", as...)
 }
