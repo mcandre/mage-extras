@@ -29,7 +29,7 @@ Examples:
   * `GoVetShadow`
   * `Nakedret`
 * `UnitTest` - trigger unit test suite
-* `GoReleaser`, `CleanGoReleaser` - Normalize [goreleaser](https://goreleaser.com/)
+* `ExecSilent`, `RunVSilent` - Reduce command log noise
 
 # SYSTEM REQUIREMENTS
 
