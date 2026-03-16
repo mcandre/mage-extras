@@ -29,6 +29,7 @@ Examples:
   * `GoVetShadow`
   * `Nakedret`
 * `UnitTest` - trigger unit test suite
+* `NoVendor` - Query Go source file paths excluding vendoring
 * `ExecSilent`, `RunVSilent` - Reduce command log noise
 
 # SYSTEM REQUIREMENTS
