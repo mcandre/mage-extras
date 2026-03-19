@@ -32,12 +32,12 @@ Examples:
 * `NoVendor` - Query Go source file paths excluding vendoring
 * `ExecSilent`, `RunVSilent` - Reduce command log noise
 
-# SYSTEM REQUIREMENTS
+# PREREQUISITES
 
 * [Go](https://go.dev/)
 * [Mage](https://magefile.org/) 1.16.1+
 
-For details on developing mx, see our [development guide](DEVELOPMENT.md).
+For details on building from source, see our [development guide](DEVELOPMENT.md).
 
 # RESOURCES
 

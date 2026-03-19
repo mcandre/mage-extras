@@ -8,38 +8,8 @@ import (
 	"github.com/mcandre/mx"
 )
 
-// CoverHTML denotes the HTML formatted coverage filename.
-const CoverHTML = "cover.html"
-
-// CoverProfile denotes the raw coverage data filename.
-const CoverProfile = "cover.out"
-
-// Default references the default build task.
-var Default = Test
-
 // Audit runs a security audit.
 func Audit() error { return Govulncheck() }
-
-// Clean deletes build artifacts.
-func Clean() error { mg.Deps(CleanCoverage); return nil }
-
-// CleanCoverage deletes coverage data.
-func CleanCoverage() error {
-	if err := sh.Rm(CoverHTML); err != nil {
-		return err
-	}
-
-	return sh.Rm(CoverProfile)
-}
-
-// CoverageHTML generates HTML formatted coverage data.
-func CoverageHTML() error {
-	mg.Deps(CoverageProfile)
-	return mx.CoverageHTML(CoverHTML, CoverProfile)
-}
-
-// CoverageProfile generates raw coverage data.
-func CoverageProfile() error { return mx.CoverageProfile(CoverProfile) }
 
 // Errcheck runs errcheck.
 func Errcheck() error { return sh.RunV("errcheck", "-blank") }
