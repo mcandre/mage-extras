@@ -37,7 +37,7 @@ Examples:
 * [Go](https://go.dev/)
 * [Mage](https://magefile.org/) 1.16.1+
 
-For details on building from source, see our [development guide](DEVELOPMENT.md).
+For details on building from source, see [DEVELOPMENT](DEVELOPMENT.md).
 
 # RESOURCES
 
